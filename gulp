@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cd /Users/gjdittri/elis/apps/InternalApp/InternalApp; npm run build

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+    deployFile=$HOME/scripts/deployTomcat
+    if [ -x "$deployFile" ] ; then
+        cd "$ELIS_HOME"; bash $deployFile deployAll
+    else
+        chmod +x $deployFile
+        cd "$ELIS_HOME"; bash $deployFile deployAll
+    fi
+

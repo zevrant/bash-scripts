@@ -1,0 +1,5 @@
+#!/bin/bash
+
+screen -dmsL idea idea
+screen -dmsL vagrant vagrant up 
+screen -dmsL rainDance ./rainDance

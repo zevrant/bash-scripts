@@ -1,0 +1,4 @@
+#!/bin/bash
+
+touch ~/scripts/$1
+chmod +x ~/scripts/$1

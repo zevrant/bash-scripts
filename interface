@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd /Users/gjdittri/elis/apps/Shared/Interfaces; gradle clean build
+g

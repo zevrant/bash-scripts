@@ -1,0 +1,7 @@
+#!/bin/bash
+
+screen -dmSL gulp ./gulp&
+screen -dmSL interface ./interface&
+screen -dmsL 17a ./buildEverything
+
+tail -f ~/scripts/screenlog.0
