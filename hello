@@ -1,5 +1,10 @@
 #!/bin/bash
 
-screen -dmsL idea idea
+#
+# The purpose of this script is to run all commands that one would normally run when starting up for the day
+#
+
+idea
+git pull origin master
 screen -dmsL vagrant vagrant up 
-screen -dmsL rainDance ./rainDance
+./rainDance

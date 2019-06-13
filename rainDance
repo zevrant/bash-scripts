@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# The purpose of this script is to run all the tasks needed after pulling master/switching branches
+#
+
 screen -dmSL gulp ./gulp&
 screen -dmSL interface ./interface&
 screen -dmsL 17a ./buildEverything

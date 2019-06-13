@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+#
+# The purpose of this branch is to automate creating a CI branch and feature branch when working on monolith tickets
+#
+# PARAM 1: Ticket Number (i.e. 62142 will create CI-Neuron_62142 and Neuron_62142)
+#
+
 TICKET_NUMBER="CI-Neuron_$1"
 
 echo $TICKET_NUMBER

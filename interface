@@ -1,4 +1,8 @@
 #!/bin/bash
 
+#
+# The purpose of this script is to run the 1c (Build Interfaces) command from the e2tk-mac script and have convenient access thereto
+#
+
 cd /Users/gjdittri/elis/apps/Shared/Interfaces; gradle clean build
-g
+

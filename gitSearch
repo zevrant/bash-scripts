@@ -1,3 +1,8 @@
 #!/bin/bash
 
+#
+# the purpose of this script is to alias searching your current branch for a given commit message
+#
+
+
 git log --grep=$1

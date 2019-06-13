@@ -1,5 +1,11 @@
 #/bin/bash
 
+#
+# The intention of this script is to deploy elis monolith to tomcat outside of an IDE. WIP!!!!
+#
+
+
+
 # check if ELIS_HOME exists
 "${ELIS_HOME?Your ELIS_HOME environment variable is not set. Please set it to your elis-apps directory.}"
 

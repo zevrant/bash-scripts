@@ -1,4 +1,8 @@
 #!/bin/bash
 
+#
+# Convenience script for setting new scripts executable
+#
+
 touch ~/scripts/$1
 chmod +x ~/scripts/$1
