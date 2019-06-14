@@ -4,8 +4,23 @@
 # The purpose of this script is to run all the tasks needed after pulling master/switching branches
 #
 
-screen -dmSL gulp ./gulp&
-screen -dmSL interface ./interface&
-screen -dmsL 17a ./buildEverything
+screen log logfile ~/scripts/screenlog.0
 
-tail -f ~/scripts/screenlog.0
+screen -dmSL gulp ~/scripts/gulp&
+screen -dmSL interface ~/scripts/interface&
+screen -dmsL 17a ~/scripts/buildEverything;
+
+function setLineCount() {
+	SCREEN_LIST=`screen -list | wc -l`
+}
+
+setLineCount
+
+while [ $SCREEN_LIST -gt 3 ]
+do
+  echo "Dance in progress please wait"
+  sleep 5
+done
+
+mv ./screenlog.* ~/scripts/
+
