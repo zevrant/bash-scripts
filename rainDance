@@ -3,12 +3,15 @@
 #
 # The purpose of this script is to run all the tasks needed after pulling master/switching branches
 #
+vagrant up&
+
+cd ~/elis/apps; git pull origin Staging
 
 screen log logfile ~/scripts/screenlog.0
 
-screen -dmSL gulp ~/scripts/gulp&
-screen -dmSL interface ~/scripts/interface&
-screen -dmsL 17a ~/scripts/buildEverything;
+screen -dmSL gulp ~/scripts/gulp
+screen -dmSL interface ~/scripts/interface
+screen -dmsL 17a ~/scripts/buildEverything
 
 function setLineCount() {
 	SCREEN_LIST=`screen -list | wc -l`
@@ -19,6 +22,9 @@ setLineCount
 while [ $SCREEN_LIST -gt 3 ]
 do
   echo "Dance in progress please wait"
+  setLineCount
+  numLeft=`expr $SCREEN_LIST - 3`
+  echo "There are currently $numLeft proccess remaining" 
   sleep 5
 done
 
