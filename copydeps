@@ -1,0 +1,7 @@
+cp -r ~/elis/apps/Shared/Interfaces/out/generated/classes/* ~/elis/apps/Mock/ElisMockServices/out/production/classes
+cp -r ~/elis/apps/Shared/Interfaces/out/generated/classes/* ~/elis/apps/InternalApp/InternalApp/out/production/classes
+cp -r ~/elis/apps/Shared/Interfaces/out/generated/classes/* ~/elis/apps/EIP/LockboxIntegration/out/production/classes
+cp -r ~/elis/apps/Shared/Crypto/out/production/classes/* ~/elis/apps/Backend/Elis2Services/out/production/classes
+cp ~/elis/apps/files/FeeCalculationRules.drl ~/elis/apps/Backend/Elis2Services/out/production/resources/
+cp -r ~/elis/apps/Shared/Interfaces/out/generated/classes/* ~/elis/apps/Shared/Interfaces/out/production/classes
+cp -r ~/elis/apps/Backend/Elis2Services/out/intTest/classes/* ~/elis/apps/Backend/Elis2ServicesLib/out/intTest/classes/

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+tail -f ~/scripts/screenlog.0
+
