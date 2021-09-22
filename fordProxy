@@ -1,0 +1,7 @@
+#!/bin/bash
+
+export http_proxy='internet.ford.com:83'
+export https_proxy='internet.ford.com:83'
+export no_proxy='*.ford.com|localhost|internet.ford.com'
+
+cat ~/.gradle/gradle-proxy.properties >> ~/.gradle/gradle.properties

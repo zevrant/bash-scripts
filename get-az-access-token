@@ -1,0 +1,8 @@
+#!/bin/bash
+
+az login
+
+token=`az account get-access-token | jq .accessToken`
+token=`echo $token | cut -c 2-$((${#token}-1))`
+
+export AZ_TOKEN=$token

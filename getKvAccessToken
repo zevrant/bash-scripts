@@ -1,0 +1,5 @@
+#!/bin/bash
+
+azAccessToken=`az account get-access-token --resource https://vault.azure.net | jq .accessToken`
+azAccessToken=`echo $azAccessToken | cut -c 2-$((${#azAccessToken}-1))`
+echo $azAccessToken

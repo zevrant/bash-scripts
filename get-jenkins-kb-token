@@ -1,0 +1,16 @@
+environment=$1
+
+~/scripts/get-az-access-token
+if [ $environment == "preprod" ]
+then
+	echo "Activating preprod kubernetes"
+	az account set --subscription "AZ-FSM-FLEETMGMT-PRE"
+	~/scripts/get-kubernetes-token fcs-jenkins-preprod fcs-jenkins-preprod
+	~/scripts/kb-set-namespace jenkins
+elif [ $environment == "prod" ]
+then
+	echo "Activating prod kubernetes"
+	az account set --subscription "AZ-FSM-FLEETMGMT-PROD"
+	~/scripts/get-kubernetes-token fcs-jenkins fcs-jenkins-2021
+	~/scripts/kb-set-namespace jenkins
+fi
