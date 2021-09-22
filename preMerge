@@ -1,7 +1,0 @@
-#!/bin/bash
-~/scripts/ci
-~/scripts/pull
-~/scripts/push
-~/scripts/feature
-git pull
-~/scripts/push

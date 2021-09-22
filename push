@@ -1,9 +1,0 @@
-#!/bin/bash
-
-
-#
-# Convenience script for pushing you branch to it's remote version
-#
-
-branch=`git branch | grep \* | cut -d ' ' -f2`
-git push origin $branch

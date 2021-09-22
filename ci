@@ -1,9 +1,0 @@
-#!/bin/bash
-
-#
-# The purpose of this script is to be able to quickly switch to the corresponding CI branch for whatever branch you are currently on
-#
-
-
-MY_CURRENT_BRANCH=`git branch | grep \* | cut -d ' ' -f2`
-git checkout "CI-$MY_CURRENT_BRANCH"
