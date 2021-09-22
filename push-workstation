@@ -1,0 +1,11 @@
+dirs=`ls -ld ~/git/zevrant/*`
+readarray -t dirList <<<"$dirs"
+
+for dir in "${dirList[@]}"
+do
+	IFS=' '
+	read -a folder <<< "$dir"
+	echo ${folder[8]}/
+	branch=`cd ${folder[8]} && git branch | grep \* | awk -F ' ' '{print $2}'`
+	(cd ${folder[8]} && git commit -am "pushing workstation" && git push origin $branch)
+done

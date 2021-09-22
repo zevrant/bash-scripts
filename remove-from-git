@@ -1,0 +1,1 @@
+FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch $1" -f HEAD
