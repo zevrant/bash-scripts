@@ -1,7 +1,23 @@
 #!/bin/bash
 
-export http_proxy='internet.ford.com:83'
-export https_proxy='internet.ford.com:83'
+export http_proxy='http://internet.ford.com:83'
+export https_proxy='http://internet.ford.com:83'
 export no_proxy='*.ford.com|localhost|internet.ford.com'
 
+if [ ! -f ~/.gradle/gradle-proxy.properties ]; then
+	touch ~/.gradle/gradle-proxy.properties
+	echo 'systemProp.http.proxyHost="internet.ford.com"' > ~/.gradle/gradle-proxy.properties
+	echo 'systemProp.https.proxyHost="internet.ford.com"' >> ~/.gradle/gradle-proxy.properties
+	echo 'systemProp.http.proxyPort=83' >>  ~/.gradle/gradle-proxy.properties
+	echo 'systemProp.https.proxyPort=83' >>  ~/.gradle/gradle-proxy.properties
+	echo 'systemProp.http.nonProxyHosts="localhost|127.0.0.0/8|::1|nexus.ford.com|*.apps.pd01.edc.caas.ford.com|192.168.1.0/16|*.shc.ford.com' >>  ~/.gradle/gradle-proxy.properties
+fi
+
+if [ ! -f ~/.gradle/gradle.properties.bak ]; then
+	touch ~/.gradle/gradle.properties
+	cp ~/.gradle/gradle.properties ~/.gradle/gradle.properties.bak
+fi
+
+cat ~/.gradle/gradle.properties.bak > ~/.gradle/gradle.properties
 cat ~/.gradle/gradle-proxy.properties >> ~/.gradle/gradle.properties
+
