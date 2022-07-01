@@ -18,6 +18,9 @@ if [ ! -f ~/.gradle/gradle.properties.bak ]; then
 	cp ~/.gradle/gradle.properties ~/.gradle/gradle.properties.bak
 fi
 
+git config --global http.proxy $http_proxy
+git config --global https.proxy $https_proxy
+
 cat ~/.gradle/gradle.properties.bak > ~/.gradle/gradle.properties
 cat ~/.gradle/gradle-proxy.properties >> ~/.gradle/gradle.properties
 

@@ -7,3 +7,7 @@ unset NO_PROXY
 
 cat ~/.gradle/gradle.properties.bak > ~/.gradle/gradle.properties
 
+rm -f /etc/apt/apt.conf.d/proxy.conf
+
+git config --global --unset https.proxy
+git config --global --unset http.proxy
