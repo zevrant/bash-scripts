@@ -1,4 +1,4 @@
 echo "switching to $1"
-rm ~/.kube/cache
+rm -f ~/.kube/cache
 ln -sf ~/.kube-configs/$1/cache ~/.kube/cache
 ln -sf ~/.kube-configs/$1/config ~/.kube/config
